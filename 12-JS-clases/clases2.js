@@ -34,6 +34,7 @@ let Carlos = new Jugadores('Carlos','Masculino','Vino','Collares, Pulseras, Meda
 let Erick = new Jugadores('Erick','BI','Blanco','Reloj y collar');
 let Princesa = new Jugadores('Amaranta','Femenino','Amarillo','Collares, pulseras, aretes y anillos');
 let Mascota = new Jugadores('Lukas','Lesbiana','Azul','Collar');
+let Enamorada = new Jugadores('Eva','Mujer','Vino','Anillos, pulseras, medallitas, aretes, collares');
 
 
 //COMPROBAMOS QUE FUNCIONAN USANDO LA CONSOLA
@@ -43,22 +44,31 @@ console.log(Carlos.generoJugador);
 console.log(Erick.generoJugador);
 console.log(Princesa.generoJugador);
 console.log(Mascota.generoJugador);
+console.log(Enamorada.generoJugador);
 
 //Usamos el método SET ya creado anteriormente para cambiar el valor de un atributo
 
-//Haciendo la corrección respectiva del valor del atributo Genero
+//Haciendo la corrección respectiva del valor del atributo Genero de Erick
 console.log(Erick.saludar());
 console.log(Erick.generoJugador);
 Erick.generoJugador = 'Masculino';
 console.log(Erick.generoJugador);
 
-//Haciendo la corrección respectiva del valor del atributo Genero
+//Haciendo la corrección respectiva del valor del atributo Genero de Mascota
 console.log(Mascota.saludar());
 console.log(Mascota.generoJugador);
 Mascota.generoJugador= 'Masculino';
 console.log(Mascota.generoJugador);
 
+//Haciendo la corrección respectiva del valor del atributo Genero de Eva
+console.log(Enamorada.saludar());
+console.log(Enamorada.generoJugador);
+Enamorada.generoJugador = 'Femenino';
+console.log(Enamorada.generoJugador);
+
+
 console.log(Carlos.saludar());
 console.log(Erick.saludar());
 console.log(Princesa.saludar());
 console.log(Mascota.saludar());
+console.log(Enamorada.saludar());
