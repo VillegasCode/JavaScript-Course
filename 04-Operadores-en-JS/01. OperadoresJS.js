@@ -1,4 +1,4 @@
-//OPERADORES ARITMÉTICOS
+//01. OPERADORES ARITMÉTICOS
 let operando1 = 3;
 let operando2 = 2;
 let resultado;
