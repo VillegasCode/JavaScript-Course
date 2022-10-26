@@ -1,5 +1,8 @@
 //04. OPERADORES TERNARIO
 
+//Tiene la siguiente sintaxis
+//(condition) ? true : false;
+
 resultado = (30 === 30) ? 'SI es igual': 'NO es igual';
 
 console.log(resultado);
