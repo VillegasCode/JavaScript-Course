@@ -41,3 +41,32 @@ console.log(fechaConParametros);
 //SETTERS
 fechaConParametros.setFullYear(1980);
 console.log(fechaConParametros);
+
+
+//EJERCICIO 1: Mostrar la fecha actual con los días de la semana en español con el siguiente formato:
+//Domingo, 25 de Julio de 2021
+
+let fecha = new Date();
+//Obtener el dia (Domingo es 0 y Sábado es 7)
+console.log(fecha.getDay());
+
+//Obtener la fecha
+console.log(fecha.getDate());
+
+//Obtener el mes (Enero es el 0 y Diciembre es el 11)
+console.log(fecha.getMonth());
+
+//Obtener el año
+console.log(fecha.getFullYear());
+
+//Creamos un array con los días de la semana en español
+let diaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+console.log(diaSemana[fecha.getDay()]);
+
+//Creamos un ARRAY con los meses en Español
+let mesAnyo = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+console.log(mesAnyo[fecha.getMonth()]);
+
+//Usamos una STRING TEMPLATE y vamos remplazando los datos
+//console.log('Domingo, 25 de Julio de 2021');
+console.log(`${diaSemana[fecha.getDay()]},`, `${fecha.getDate()} de`, `${mesAnyo[fecha.getMonth()]} de `, `${fecha.getFullYear()}`);
