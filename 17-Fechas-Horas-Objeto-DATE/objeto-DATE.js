@@ -70,3 +70,9 @@ console.log(mesAnyo[fecha.getMonth()]);
 //Usamos una STRING TEMPLATE y vamos remplazando los datos
 //console.log('Domingo, 25 de Julio de 2021');
 console.log(`${diaSemana[fecha.getDay()]},`, `${fecha.getDate()} de`, `${mesAnyo[fecha.getMonth()]} de `, `${fecha.getFullYear()}`);
+
+
+
+//EJERCICIO 2: Mostrar la hora actual en formato 21:22:45
+let hora = new Date();
+console.log(hora.toLocaleTimeString());
