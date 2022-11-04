@@ -35,3 +35,23 @@ let elementoH2 = document.querySelectorAll('h2');
 //Indicamos la posición de la etiqueta que queremos cambiar
 elementoH2[1].innerHTML = 'Carlos';
 elementoH2[0].innerHTML = 'querySelector' + '<br>' + '& querySelectorAll';
+
+//cambiando el title de index.html
+let elementoTitle = document.getElementsByTagName('title');
+//Siempre hay que indicar la posición de la etiqueta
+elementoTitle[0].innerHTML = 'Lectura y Modificación de Nodos';
+
+
+//Cambiando el título con querySelector
+elementoTitle = document.querySelector('title');
+elementoTitle.innerHTML = 'Uso de querySelector';
+
+//Cambiando el título con querySelectorAll usando un índice
+elementoTitle = document.querySelectorAll('title');
+elementoTitle[0].innerHTML = 'querySelectorAll con índice';
+
+elementoH2[1].innerHTML = 'También se puede hacer con "document.getElementsByTagName"';
+
+let nombre = prompt('Ingresa tu nombre: ');
+elementoTitle[0].innerHTML = 'Documento de ' + nombre;
+elementosPorEtiquetas[2].innerHTML = nombre + ' vamos a seguir programando que nos espera mucho billete';
