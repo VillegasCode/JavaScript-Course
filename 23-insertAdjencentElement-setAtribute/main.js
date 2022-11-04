@@ -29,12 +29,21 @@ const parrafoDos = document.querySelector('#parrafo2');
 const parrafoSeis = document.createElement('p');
 const parrafoSiete = document.createElement('p');
 const parrafoCero = document.createElement('p');
+const parrafoExtra = document.createElement('p');
 //Agregamos contenido a los 2 párrafos
 parrafoSeis.innerHTML = 'Párrafo 6 creado con innerHTML y agregado con append() junto al párrafo 7';
 parrafoSiete.innerHTML = 'Párrafo 7 creado con innerHTML y agregado con append() junto al párrafo 6';
 parrafoCero.innerHTML = 'Párrafo 0';
+parrafoExtra.innerHTML = 'Párrafo EXTRA';
 
 //Publicamos o añadimos en el index.html los 2 párrafos con su respectivo contenido
 elementoPadre.append(parrafoSeis, parrafoSiete);
 elementoPadre.insertBefore(parrafoCero, parrafoUno);
 elementoPadre.insertBefore(parrafoSiete, parrafoDos);
+
+//insertAdjacentElement se puede usar con cualquiera de estos 4 párametros
+//beforebegin (Se ubicará antes del inicio de la etiqueta padre)
+//afterbegin (Se ubicará justo después del inicio de la etiqeuta padre)
+//beforeend (Se ubicará antes del cierre de la etiqueta padre)
+//afterend (Se ubicará después de la etiqueta de cierre padre, quedando fuera de dicha etiqueta)
+elementoPadre.insertAdjacentElement("afterbegin", parrafoExtra);
