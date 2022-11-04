@@ -47,3 +47,6 @@ elementoPadre.insertBefore(parrafoSiete, parrafoDos);
 //beforeend (Se ubicará antes del cierre de la etiqueta padre)
 //afterend (Se ubicará después de la etiqueta de cierre padre, quedando fuera de dicha etiqueta)
 elementoPadre.insertAdjacentElement("afterbegin", parrafoExtra);
+
+//ATRIBUTOS como nombres de CLASES y ID dentro de las etiquetas
+parrafoExtra.setAttribute('class', 'parrafos')
