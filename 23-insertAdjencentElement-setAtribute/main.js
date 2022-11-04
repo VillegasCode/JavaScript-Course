@@ -20,15 +20,21 @@ parrafoCinco.innerHTML = 'Párrafo 5 creado con innerHTML, ejemplo <h2>Esta es l
 elementoPadre.appendChild(parrafoCinco);
 
 
+//Seleccionar hijo referencia
+const parrafoUno = document.querySelector('p');
+const parrafoDos = document.querySelector('#parrafo2');
 
 //Otra forma de agregar nodos al html
 //Creamos las etiquetas de los 2 nuevos párrafos
 const parrafoSeis = document.createElement('p');
 const parrafoSiete = document.createElement('p');
-
+const parrafoCero = document.createElement('p');
 //Agregamos contenido a los 2 párrafos
 parrafoSeis.innerHTML = 'Párrafo 6 creado con innerHTML y agregado con append() junto al párrafo 7';
 parrafoSiete.innerHTML = 'Párrafo 7 creado con innerHTML y agregado con append() junto al párrafo 6';
+parrafoCero.innerHTML = 'Párrafo 0';
 
 //Publicamos o añadimos en el index.html los 2 párrafos con su respectivo contenido
 elementoPadre.append(parrafoSeis, parrafoSiete);
+elementoPadre.insertBefore(parrafoCero, parrafoUno);
+elementoPadre.insertBefore(parrafoSiete, parrafoDos);
