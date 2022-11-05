@@ -51,18 +51,35 @@ elementoPadre.insertAdjacentElement("afterbegin", parrafoExtra);
 //Agregamos ATRIBUTOS como nombres de CLASES y ID dentro de las etiquetas
 parrafoExtra.setAttribute('class', 'parrafos');
 parrafoCero.setAttribute('id', 'parrafoCero');
-//parrafoCuatro.setAttribute('class', 'dinamicos');
+parrafoCuatro.setAttribute('class', 'dinamicos');
+
+//Creación de Párrafos 8,9,10,11 y 12 de forma automática usando 2 arrays
 
 //Creamos un arreglo que contenga los números en letras
 let numEnLetra = ['Ocho', 'Nueve', 'Diez', 'Once', 'Doce'];
 let parrafosDinamicos = new Array();
 
 for (i=0; i < numEnLetra.length; i++) {
+    //Creamos la etiqueta 'p' y la almacenamos en un array
     parrafosDinamicos[i] = document.createElement('p');
+    //Creamos una variable y le sumamos 8 al valor de i para que esté acorde con la numeración del párrafo creado
     let numParrafo = i + 8;
+    //En nuestro array parrafosdinamicos en la posición de i añadimos nuestro texto
     parrafosDinamicos[i].innerHTML = 'Párrafo ' + numParrafo;
+    //Le añadimos los atributos de 'class' y su nombre 'dinamicos' a la etiqueta 'p'
     parrafosDinamicos[i].setAttribute('class', 'dinamicos');
+    //Creamos una variable que almacenará el nombre automático que se generará al concatenar el string 'parrafo' + el array numEnLetra en su respectivo índice
     let nombreParrafo = 'parrafo' + numEnLetra[i];
+    //Añadimos el atributo de 'id' + lo que contiene la variable nombreParrafo
     parrafosDinamicos[i].setAttribute('id', nombreParrafo);
+    //Publicamos en nuestro index.html en la clase PADRE con el método 'append' el texto que está almacenado en el array parrafosDinamicos
     elementoPadre.append(parrafosDinamicos[i]);
 }
+
+elementoPadre.insertBefore(parrafosDinamicos[4], parrafoCinco);
+elementoPadre.insertAdjacentElement("afterbegin",parrafosDinamicos[2]);
+elementoPadre.insertAdjacentElement("beforeend",parrafosDinamicos[0]);
+elementoPadre.insertBefore(parrafoSeis, parrafosDinamicos[3]);
+elementoPadre.insertBefore(parrafoCinco, parrafosDinamicos[0]);
+
+parrafoSiete.setAttribute('id','parrafoSiete');
