@@ -19,3 +19,9 @@ p{
 .parrafos{
   color: red;
 }
+#parrafoCero{
+  color: blue;
+}
+.dinamicos{
+  color:rgb(0, 173, 43);
+}
