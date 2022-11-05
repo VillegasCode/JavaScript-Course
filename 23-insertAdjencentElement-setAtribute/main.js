@@ -48,5 +48,21 @@ elementoPadre.insertBefore(parrafoSiete, parrafoDos);
 //afterend (Se ubicará después de la etiqueta de cierre padre, quedando fuera de dicha etiqueta)
 elementoPadre.insertAdjacentElement("afterbegin", parrafoExtra);
 
-//ATRIBUTOS como nombres de CLASES y ID dentro de las etiquetas
-parrafoExtra.setAttribute('class', 'parrafos')
+//Agregamos ATRIBUTOS como nombres de CLASES y ID dentro de las etiquetas
+parrafoExtra.setAttribute('class', 'parrafos');
+parrafoCero.setAttribute('id', 'parrafoCero');
+//parrafoCuatro.setAttribute('class', 'dinamicos');
+
+//Creamos un arreglo que contenga los números en letras
+let numEnLetra = ['Ocho', 'Nueve', 'Diez', 'Once', 'Doce'];
+let parrafosDinamicos = new Array();
+
+for (i=0; i < numEnLetra.length; i++) {
+    parrafosDinamicos[i] = document.createElement('p');
+    let numParrafo = i + 8;
+    parrafosDinamicos[i].innerHTML = 'Párrafo ' + numParrafo;
+    parrafosDinamicos[i].setAttribute('class', 'dinamicos');
+    let nombreParrafo = 'parrafo' + numEnLetra[i];
+    parrafosDinamicos[i].setAttribute('id', nombreParrafo);
+    elementoPadre.append(parrafosDinamicos[i]);
+}
