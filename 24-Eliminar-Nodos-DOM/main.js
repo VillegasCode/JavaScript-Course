@@ -26,3 +26,9 @@ parrafoDos.remove();
 const parrafoTres = document.querySelector('#parrafo3');
 //REPLACECHILD
 elementoPadre.replaceChild(parrafoCuatro, parrafoTres);
+
+
+//EVENT LISTENERS
+parrafoCuatro.addEventListener('click', ()=>{
+    parrafoCuatro.innerHTML = 'Nuevo Texto';
+})
