@@ -20,5 +20,8 @@ function saludo() {
 }
 
 function capturarEvento(event) {
-    console.log(event);
+    //Podemos hacer que imprima cualquier propiedad que deseemos solo debemos cambiar la propiedad en vez de baseURI puede ser innerHTML, id, type, tabIndex
+    console.log("baseURI = " + event.target.baseURI);
+    console.log("id = " + event.target.id);
+    console.log("tabIndex = " + event.target.tabIndex);
 }
