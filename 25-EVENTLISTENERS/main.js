@@ -25,3 +25,11 @@ function capturarEvento(event) {
     console.log("id = " + event.target.id);
     console.log("tabIndex = " + event.target.tabIndex);
 }
+
+userInput.addEventListener('keypress', (event)=>{
+    //los keyCode son los charCode, los charCode son los números que se le asigna a las teclas
+    if (event.keyCode === 13) {
+        //Mostrará en consola el valor que se ingrese en el textbox
+        console.log(event.target.value);
+    }
+})
