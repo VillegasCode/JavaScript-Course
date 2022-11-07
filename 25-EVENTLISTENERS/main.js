@@ -4,19 +4,19 @@ saludoBtn.addEventListener('click', saludo);
 //Remover Event Listener
 //saludoBtn.removeEventListener('click', saludo);
 
-saludoBtn1.addEventListener('contextmenu', ()=>{
-    console.log('Haz hecho clic derecho');
+saludoBtn1.addEventListener('contextmenu', (event)=>{
+    console.log('Haz hecho clic derecho en ' + event.target.innerHTML);
 });
 
-saludoBtn2.addEventListener('mouseover', ()=>{
-    console.log('Haz pasado el mouse encima');
+saludoBtn2.addEventListener('mouseover', (event)=>{
+    console.log('Haz pasado el mouse encima de ' + event.target.innerHTML);
 });
 
 //Botón para capturar eventos
 btnEvento.addEventListener('click', capturarEvento);
 
-function saludo() {
-    console.log("Hola desde función externa");
+function saludo(event) {
+    console.log("Hola desde función externa presionando el botón " +  event.target.innerHTML);
 }
 
 function capturarEvento(event) {
